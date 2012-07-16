@@ -1,0 +1,16 @@
+<map id="model" name="model">
+<area shape="rect" href="?app=edi27c" title="D&#45;Glucose(in)" alt="" coords="482,397,645,445" />
+<area shape="rect" href="?app=edi27c" title="D&#45;Glucose(ex)" alt="" coords="521,104,689,152" />
+<area shape="rect" href="?app=edi8c" title="ADP" alt="" coords="349,690,423,738" />
+<area shape="rect" href="?app=edi77c" title="D&#45;Glucose 6&#45;phosphate" alt="" coords="447,690,701,738" />
+<area shape="rect" href="?app=edi65c" title="H+(in)" alt="" coords="735,690,831,738" />
+<area shape="rect" href="?app=edi8898t" alt="" coords="645,797,791,824" />
+<area shape="rect" href="?app=edi8901t" alt="" coords="791,797,906,824" />
+<area shape="rect" href="?app=edi65c" title="H+(ex)" alt="" coords="739,104,841,152" />
+<area shape="rect" href="?app=edi2c" title="ATP" alt="" coords="669,397,741,445" />
+<area shape="rect" href="?app=edi8736t" title="D&#45;glucose transport in via proton symport" alt="" coords="477,250,890,298" />
+<area shape="rect" href="?app=edi8970t" title="SOURCE: Glucose[e]" alt="" coords="486,8,697,56" />
+<area shape="rect" href="?app=edi8971t" title="SOURCE: H+[e]" alt="" coords="721,8,886,56" />
+<area shape="rect" href="?app=edi149t" alt="" coords="18,554,371,581" />
+<area shape="rect" href="?app=edi4526t" alt="" coords="371,554,757,581" />
+</map>

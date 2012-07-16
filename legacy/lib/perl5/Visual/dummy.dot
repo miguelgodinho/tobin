@@ -1,0 +1,210 @@
+digraph "model" {
+	"c27-0" [
+		label = "D-Glucose(in)"
+		fontname = "Vera"
+		fontcolor = "black"
+		URL = "?app=edi27c"
+		shape = "ellipse"
+		color = "black"
+	]
+	"c27-1" [
+		label = "D-Glucose(ex)"
+		fontname = "Vera"
+		fontcolor = "black"
+		URL = "?app=edi27c"
+		shape = "ellipse"
+		color = "black"
+	]
+	"c8-0" [
+		label = "ADP"
+		fontname = "Vera"
+		fontcolor = "black"
+		URL = "?app=edi8c"
+		shape = "ellipse"
+		color = "yellow"
+	]
+	"c77-0" [
+		label = "D-Glucose 6-phosphate"
+		fontname = "Vera"
+		fontcolor = "black"
+		URL = "?app=edi77c"
+		shape = "ellipse"
+		color = "yellow"
+	]
+	"c65-0" [
+		label = "H+(in)"
+		fontname = "Vera"
+		fontcolor = "black"
+		URL = "?app=edi65c"
+		shape = "ellipse"
+		color = "black"
+	]
+	"c65-1" [
+		label = "H+(ex)"
+		fontname = "Vera"
+		fontcolor = "black"
+		URL = "?app=edi65c"
+		shape = "ellipse"
+		color = "black"
+	]
+	"c2-0" [
+		label = "ATP"
+		fontname = "Vera"
+		fontcolor = "black"
+		URL = "?app=edi2c"
+		shape = "ellipse"
+		color = "yellow"
+	]
+	"r8736" [
+		label = "D-glucose transport in via proton symport"
+		color = "black"
+		fontname = "Vera"
+		fontcolor = "black"
+		shape = "box"
+		URL = "?app=edi8736t"
+	]
+	"r8736IN" [
+		label = ""
+		color = "black"
+		shape = "point"
+		width = "0.03"
+	]
+	"r8736IN" -> "r8736" [
+		style="dashed,setlinewidth(10)"
+		arrowsize="3"
+		headport = "n"
+	]
+	"r8736OUT" [
+		label = ""
+		color = "black"
+		shape = "point"
+		width = "0.03"
+	]
+	"r8736" -> "r8736OUT" [
+		style="dashed,setlinewidth(10)"
+		arrowsize="3"
+		tailport = "s"
+		arrowhead = "none"
+	]
+	"r8970" [
+		label = "SOURCE: Glucose[e]"
+		color = "black"
+		fontname = "Vera"
+		fontcolor = "black"
+		shape = "box"
+		URL = "?app=edi8970t"
+	]
+	"r8971" [
+		label = "SOURCE: H+[e]"
+		color = "black"
+		fontname = "Vera"
+		fontcolor = "black"
+		shape = "box"
+		URL = "?app=edi8971t"
+	]
+	"revr149+4526" [
+		shape = "plaintext"
+		label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD HREF="?app=edi149t" PORT="for">ATP:D-glucose 6-phosphotransferase</TD><TD PORT="rev" HREF="?app=edi4526t">ATP:D-glucose 6-phosphotransferase (R)</TD></TR></TABLE>>
+		color = "black"
+		fontname = "Vera"
+		fontcolor = "black"
+	]
+	"revr149+4526FOR" [
+		label = ""
+		color = "black"
+		shape = "point"
+		width = "0.014"
+	]
+	"revr149+4526FOR" -> "revr149+4526":for:n [
+		style="dashed,setlinewidth(10)"
+		arrowsize="3"
+	]
+	"revr149+4526":rev:n -> "revr149+4526FOR" [
+		style="dashed,setlinewidth(1)"
+		color="grey"
+	]
+	"revr149+4526REV" [
+		label = ""
+		color = "black"
+		shape = "point"
+		width = "0.014"
+	]
+	"revr149+4526":for:s -> "revr149+4526REV" [
+		style="dashed,setlinewidth(10)"
+		arrowsize="3"
+	]
+	"revr149+4526REV" -> "revr149+4526":rev:s [
+		style="dashed,setlinewidth(1)"
+		color="grey"
+	]
+	"revr8898+8901" [
+		shape = "plaintext"
+		label=<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0"><TR><TD HREF="?app=edi8898t" PORT="for">SOURCE: H+[i]</TD><TD PORT="rev" HREF="?app=edi8901t">SINK: H+[i]</TD></TR></TABLE>>
+		color = "black"
+		fontname = "Vera"
+		fontcolor = "black"
+	]
+"c2-0" -> "revr149+4526FOR" [
+		arrowtail="normal"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"revr149+4526REV" -> "c8-0" [
+		arrowtail="normal"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"c27-0" -> "revr149+4526FOR" [
+		arrowtail="normal"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"revr149+4526REV" -> "c65-0" [
+		arrowtail="normal"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"revr149+4526REV" -> "c77-0" [
+		arrowtail="normal"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"r8736OUT" -> "c27-0" [
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"c27-1" -> "r8736IN" [
+		arrowhead = "none"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"c65-1" -> "r8736IN" [
+		arrowhead = "none"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"r8736OUT" -> "c65-0" [
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"c65-0" -> "revr8898+8901" [
+		headport="rev:s"
+		style="dashed,setlinewidth(10)"
+		arrowsize="3"
+	]
+"revr8898+8901" -> "c65-0" [
+		tailport="for:s"
+		style="dashed,setlinewidth(1)"
+		color="grey"
+	]
+"r8970" -> "c27-1" [
+		tailport = "s"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+"r8971" -> "c65-1" [
+		tailport = "s"
+		style="setlinewidth(1)"
+		arrowsize="1"
+	]
+}
